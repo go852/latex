@@ -5,12 +5,20 @@
   	}
 }
 \begin{document}
-	\begin{tikzpicture}[global scale = 1]
-  		\draw [black, ->, >=stealth] (-10,0) -- (10,0); % ->箭头，,>=stealth：实心箭头
+	\begin{tikzpicture}[global scale = 0.5]
+  		\draw [black, ->, >=stealth] (-10,0) -- (10,0); 
 		\foreach \x in {-8, ..., 8}
 			\draw (\x cm,5pt) -- (\x cm,0pt) node[anchor=north] {$\x$};
-		% -8, 06
+		% -8, -6, -5, 0.1, -1/4, 0, -4.2, -5.1, 2/3, 3/2, +1/5, 0
 		\draw [red, fill=red] (-8, 0) circle(2pt) node [above] {$-8$}; 
 		\draw [red, fill=red] (-6, 0) circle(2pt) node [above] {$-6$}; 	
+		
+		\draw [black, ->, >=stealth] (-10,2) -- (10,2); 
+		\foreach \x in {-8, ..., 8}
+			\draw (\x cm,2cm+5pt) -- (\x cm,2cm+0pt) node[anchor=north] {$\x$};
+		% -8, -6, -5, 0.1, -1/4, 0, -4.2, -5.1, 2/3, 3/2, +1/5, 0
+		\draw [red, fill=red] (-5, 2) circle(2pt) node [above] {$-5$}; 
+		\draw [blue, fill=blue] (0.1, 2) circle(2pt) node [above] {$0.1$}; 			
+		 			
 	\end{tikzpicture}    
 \end{document}
